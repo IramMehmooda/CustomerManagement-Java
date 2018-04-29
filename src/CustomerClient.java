@@ -161,8 +161,8 @@ public class CustomerClient extends JFrame implements ActionListener {
     }
 
     private void handleGetAll() {
+    	//in.readUTF();
     	
-
 
     }
 
@@ -196,7 +196,16 @@ public class CustomerClient extends JFrame implements ActionListener {
     		
     	}
     	else {
+    		try {
+    		out.writeUTF(t1.getText().trim());
+    		out.writeUTF(t2.getText().trim());
+    		out.writeUTF(t3.getText().trim());
+    		out.writeUTF(t4.getText().trim());
     		
+    		}
+    		catch (Exception e) {
+				// TODO: handle exception
+			}
     	}
     }
 
